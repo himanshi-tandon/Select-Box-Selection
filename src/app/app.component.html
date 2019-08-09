@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style = "text-align:center">
+   <span appChangeText >Welcome to {{title}}.</span>
+</div>
+
+<div> Months :
+   <select (change)="selectChangeHandler($event)">
+      <option *ngFor="let i of months" value={{i}}>{{i}}</option>
+   </select>
+</div>
+<article>
+
+    <p><span>You selected: </span><b>{{selectedDay}}</b></p>
+
+</article>
+<div>
+<h1>Custom Pipe</h1>
+<b>Square root of 25 is: {{25 | sqrt}}</b>
+<br/>
+<b>Square root of 729 is: {{729 | sqrt}}</b>
+</div>
+
+<a routerLink = "dashboard">Dashboard</a>
+
+
+<router-outlet></router-outlet>
